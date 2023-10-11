@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "i+5A7sc7st3JOUpRSc/Mj7kXcD6vGTcJKTUSO5bSmVRFdA/f0OX5LFO+iS3esfKzpZDQnov0HBzLsQv0hw17CA==",
+  "success": true,
+  "projectFilePath": "/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/Dropbox.csproj",
+  "expectedPackageFiles": [
+    "/Users/luciann/.nuget/packages/godot.sourcegenerators/4.1.1/godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "/Users/luciann/.nuget/packages/godotsharp/4.1.1/godotsharp.4.1.1.nupkg.sha512",
+    "/Users/luciann/.nuget/packages/godotsharpeditor/4.1.1/godotsharpeditor.4.1.1.nupkg.sha512",
+    "/Users/luciann/.nuget/packages/microsoft.netcore.app.ref/6.0.22/microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "/Users/luciann/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.22/microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

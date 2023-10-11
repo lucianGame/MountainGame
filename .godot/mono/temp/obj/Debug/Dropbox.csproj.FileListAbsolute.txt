@@ -1,0 +1,17 @@
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/bin/Debug/Dropbox.deps.json
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/bin/Debug/Dropbox.runtimeconfig.json
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/bin/Debug/Dropbox.dll
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/bin/Debug/Dropbox.pdb
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.csproj.AssemblyReference.cache
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.GeneratedMSBuildEditorConfig.editorconfig
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.AssemblyInfoInputs.cache
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.AssemblyInfo.cs
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.csproj.CoreCompileInputs.cache
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.csproj.CopyComplete
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.dll
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/refint/Dropbox.dll
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.pdb
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/Dropbox.genruntimeconfig.cache
+/Users/luciann/Dropbox/Jonah Mountain Game/MountainGame/.godot/mono/temp/obj/Debug/ref/Dropbox.dll

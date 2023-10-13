@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxgdhkpbke1xp"]
+[gd_scene load_steps=13 format=3 uid="uid://dxgdhkpbke1xp"]
 
 [ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
 [ext_resource type="PackedScene" uid="uid://cp06lwk3tm57x" path="res://Blender Files/HANDS.glb" id="2_alwg8"]
+[ext_resource type="PackedScene" uid="uid://dqwtkick2py45" path="res://Blender Files/HANDS.blend" id="3_6sneh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2ln"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -94,3 +95,6 @@ mesh = SubResource("BoxMesh_ykio4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle3"]
 shape = SubResource("BoxShape3D_wxcpr")
+
+[node name="HANDS" parent="." instance=ExtResource("3_6sneh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6678, 2.01941, 11.3892)

@@ -21,7 +21,6 @@ project/assembly_name="Dropbox"
 
 [filesystem]
 
-import/blender/enabled=false
 import/fbx/enabled=false
 
 [input]

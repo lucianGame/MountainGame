@@ -1,11 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697004459
-icon.svg::CompressedTexture2D::2766976389239190203::1697004274::1697004313::1::::<><>::
-level.tscn::PackedScene::5664038604934831860::1697004445::0::1::::<><>::res://PlayerMovement.gd
-mountain.tscn::PackedScene::8786186921278594853::1697004445::0::1::::<><>::res://PlayerMovent.gd<>uid://cp06lwk3tm57x::::res://Blender Files/HANDS.glb
-PlayerMovement.gd::GDScript::-1::1697004274::0::1::::<>CharacterBody3D<>::
-PlayerMovent.gd::GDScript::-1::1697004274::0::1::::<>CharacterBody3D<>::
-::res://Blender Files/::1697004314
-HANDS.glb::PackedScene::5879186508576733535::1697004274::1697004314::1::::<><>::
-::res://Textures/::1697004313
-SKIN.png::CompressedTexture2D::2403446980814694860::1697004274::1697004313::1::::<><>::
+::res://::1697234905
+HANDS.blend::PackedScene::3203450634346596634::1697234425::1697235440::1::::<><>::
+icon.svg::CompressedTexture2D::2766976389239190203::1697233023::1697233135::1::::<><>::
+level.tscn::PackedScene::5664038604934831860::1697234899::0::1::::<><>::res://PlayerMovement.gd
+mountain.tscn::PackedScene::8786186921278594853::1697234899::0::1::::<><>::res://PlayerMovent.gd<>uid://cp06lwk3tm57x::::res://Blender Files/HANDS.glb
+PlayerMovement.gd::GDScript::-1::1697233023::0::1::::<>CharacterBody3D<>::
+PlayerMovent.gd::GDScript::-1::1697233023::0::1::::<>CharacterBody3D<>::
+::res://Blender Files/::1697234796
+HANDS.blend::PackedScene::8328871764446211776::1697234796::1697235439::1::::<><>::
+HANDS.glb::PackedScene::5879186508576733535::1697233023::1697233023::1::::<><>::
+::res://Textures/::1697234460
+HANDS.blend::PackedScene::1160395315159658360::1697234460::1697235440::1::::<><>::
+SKIN.png::CompressedTexture2D::2403446980814694860::1697233023::1697233023::1::::<><>::

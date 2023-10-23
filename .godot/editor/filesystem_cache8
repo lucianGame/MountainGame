@@ -1,14 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697234905
-HANDS.blend::PackedScene::3203450634346596634::1697234425::1697235440::1::::<><>::
-icon.svg::CompressedTexture2D::2766976389239190203::1697233023::1697233135::1::::<><>::
-level.tscn::PackedScene::5664038604934831860::1697234899::0::1::::<><>::res://PlayerMovement.gd
-mountain.tscn::PackedScene::8786186921278594853::1697234899::0::1::::<><>::res://PlayerMovent.gd<>uid://cp06lwk3tm57x::::res://Blender Files/HANDS.glb
-PlayerMovement.gd::GDScript::-1::1697233023::0::1::::<>CharacterBody3D<>::
-PlayerMovent.gd::GDScript::-1::1697233023::0::1::::<>CharacterBody3D<>::
-::res://Blender Files/::1697234796
-HANDS.blend::PackedScene::8328871764446211776::1697234796::1697235439::1::::<><>::
-HANDS.glb::PackedScene::5879186508576733535::1697233023::1697233023::1::::<><>::
-::res://Textures/::1697234460
-HANDS.blend::PackedScene::1160395315159658360::1697234460::1697235440::1::::<><>::
-SKIN.png::CompressedTexture2D::2403446980814694860::1697233023::1697233023::1::::<><>::
+::res://::1697428722
+CharacterBody3D.gd::GDScript::-1::1697247905::0::1::::<>CharacterBody3D<>::
+HANDS.blend::PackedScene::3203450634346596634::1697235950::1697235950::1::::<><>::
+icon.svg::CompressedTexture2D::2766976389239190203::1696030688::1697236028::1::::<><>::
+level.tscn::PackedScene::5664038604934831860::1697251261::0::1::::<><>::res://PlayerMovement.gd
+mountain.tscn::PackedScene::8786186921278594853::1697253367::0::1::::<><>::res://PlayerMovent.gd<>uid://cp06lwk3tm57x::::res://Blender Files/HANDS.glb<>uid://dqwtkick2py45::::res://Blender Files/HANDS.blend<>res://Tardigrade.gd
+Player.cs::CSharpScript::-1::1696396856::0::1::::<><>::
+PlayerMovement.gd::GDScript::-1::1696642963::0::1::::<>CharacterBody3D<>::
+PlayerMovent.gd::GDScript::-1::1696997567::0::1::::<>CharacterBody3D<>::
+Tardigrade.gd::GDScript::-1::1697253367::0::1::::<>CharacterBody3D<>::
+::res://Blender Files/::1697235950
+HANDS.blend::PackedScene::8328871764446211776::1697235950::1697235950::1::::<><>::
+HANDS.glb::PackedScene::5879186508576733535::1696361124::1697003143::1::::<><>::
+::res://Blender Files/textures/::1697236028
+GRAVE.png::CompressedTexture2D::4719973608115338669::1697235950::1697236028::1::::<><>::
+::res://Textures/::1697236028
+GRAVE.png::CompressedTexture2D::5875148956844729787::1697235950::1697236028::1::::<><>::
+HANDS.blend::PackedScene::1160395315159658360::1697235950::1697235950::1::::<><>::
+SKIN.png::CompressedTexture2D::2403446980814694860::1696394188::1697003143::1::::<><>::
+::res://Textures/textures/::1697236028
+GRAVE.png::CompressedTexture2D::6771372771735188439::1697235950::1697236028::1::::<><>::

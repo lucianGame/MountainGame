@@ -44,7 +44,7 @@ transform = Transform3D(0.862514, 0.506034, 2.21194e-08, 0, -4.37114e-08, 1, 0.5
 shadow_enabled = true
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4647, 1.0645, 11.3467)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3288, 1.0645, 11.3467)
 script = ExtResource("1_b4rny")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
@@ -59,6 +59,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55105, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5052, 0)
+
+[node name="SWORD01" parent="Player/Neck/Camera3D" instance=ExtResource("5_pboay")]
+transform = Transform3D(-0.39445, 0.35077, -0.459749, 0.461788, 0.526047, 0.00515267, 0.348082, -0.300392, -0.52783, 0.376088, 0.248425, -1.55385)
+
+[node name="Cube" parent="Player/Neck/Camera3D/SWORD01" index="0"]
+transform = Transform3D(0.0399751, 0.00646955, 0.00179775, -0.000861055, 0.22444, -0.0209395, -0.00111956, 0.058385, 0.0802951, -0.0994341, -1.42441, -1.263)
 
 [node name="Enemies" type="Node3D" parent="."]
 
@@ -78,6 +84,8 @@ shape = SubResource("CapsuleShape3D_brl7s")
 mesh = SubResource("CapsuleMesh_7jm5c")
 skeleton = NodePath("../..")
 
+[node name="RayCast3D" type="RayCast3D" parent="Enemies/Enemy 1/CharacterBody3D"]
+
 [node name="Map" type="Node3D" parent="."]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Map"]
@@ -95,11 +103,6 @@ mesh = SubResource("BoxMesh_y5k5l")
 
 [node name="HANDS02" parent="." instance=ExtResource("3_wruxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
+visible = false
 
-[node name="SWORD01" parent="." instance=ExtResource("5_pboay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04211, 7.17981, -16.5665)
-
-[node name="Cube" parent="SWORD01" index="0"]
-transform = Transform3D(0.129878, 0.0210335, 0.00584595, -0.00279755, 0.729689, -0.0680914, -0.00363742, 0.189819, 0.261105, -0.0994341, -1.42441, -1.263)
-
-[editable path="SWORD01"]
+[editable path="Player/Neck/Camera3D/SWORD01"]

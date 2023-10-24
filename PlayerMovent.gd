@@ -15,6 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck #assigns the new variable to the neck object in the scene
 @onready var camera := $Neck/Camera3D
 @onready var pcap = $CollisionShape3D
+@onready var ap = $Neck/Camera3D/SWORD01/AnimationPlayer
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -26,6 +27,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			neck.rotate_y(-event.relative.x * 0.001)		#rotate the camera relative to the mouse
 			camera.rotate_x(-event.relative.y * 0.001)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
+			
+func _process(delta):
+	if Input.is_action_pressed("Attack"):
+		ap.play("light_attack")
 
 func _physics_process(delta):
 	# Add the gravity.

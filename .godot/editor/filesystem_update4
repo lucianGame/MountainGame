@@ -1,1 +1,4 @@
 res://mountain.tscn
+res://level.tscn
+res://PlayerMovent.gd
+res://Tardigrade.gd

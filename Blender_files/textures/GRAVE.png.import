@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3qdrxnsfkpdv"
-path="res://.godot/imported/GRAVE.png-fb2e60bed19b2f18a718147cf078a0ac.ctex"
+uid="uid://bguyvxscwc7qm"
+path="res://.godot/imported/GRAVE.png-f29bf62f3be82f8779faa28b2eb7ea78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/textures/GRAVE.png"
-dest_files=["res://.godot/imported/GRAVE.png-fb2e60bed19b2f18a718147cf078a0ac.ctex"]
+source_file="res://Blender_files/textures/GRAVE.png"
+dest_files=["res://.godot/imported/GRAVE.png-f29bf62f3be82f8779faa28b2eb7ea78.ctex"]
 
 [params]
 

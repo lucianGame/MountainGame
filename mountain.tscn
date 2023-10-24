@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxgdhkpbke1xp"]
+[gd_scene load_steps=16 format=3 uid="uid://dxgdhkpbke1xp"]
 
 [ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
-[ext_resource type="PackedScene" uid="uid://cp06lwk3tm57x" path="res://Blender Files/HANDS.glb" id="2_alwg8"]
-[ext_resource type="PackedScene" uid="uid://dqwtkick2py45" path="res://Blender Files/HANDS.blend" id="3_6sneh"]
+[ext_resource type="PackedScene" uid="uid://mqdlt8ijgb24" path="res://Blender_files/HANDS02.blend" id="3_wruxt"]
+[ext_resource type="Texture2D" uid="uid://6kly4xpmakdk" path="res://SKIN.png" id="4_dc2em"]
 [ext_resource type="Script" path="res://Tardigrade.gd" id="4_y12hr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2ln"]
@@ -34,6 +34,9 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 
 [sub_resource type="BoxMesh" id="BoxMesh_y5k5l"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2uj2"]
+albedo_texture = ExtResource("4_dc2em")
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -59,14 +62,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55105, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5052, 0)
-
-[node name="HANDS" parent="Player/Neck/Camera3D" instance=ExtResource("2_alwg8")]
-transform = Transform3D(-0.00111526, 0, 0.149996, -0.0339279, 0.146112, -0.000252263, -0.146108, -0.0339288, -0.00108635, 0.0160498, -0.254855, -0.732875)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Neck/Camera3D/HANDS"]
-
-[node name="HANDS" parent="." instance=ExtResource("3_6sneh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6678, 2.01941, 11.3892)
 
 [node name="Enemies" type="Node3D" parent="."]
 
@@ -100,3 +95,11 @@ shape = SubResource("BoxShape3D_fn6bu")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/NavigationRegion3D/Floor"]
 transform = Transform3D(60, 0, 0, 0, 0.1, 0, 0, 0, 60, 0, 0, 0)
 mesh = SubResource("BoxMesh_y5k5l")
+
+[node name="HANDS02" parent="." instance=ExtResource("3_wruxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
+
+[node name="Cube" parent="HANDS02/Armature/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_a2uj2")
+
+[editable path="HANDS02"]

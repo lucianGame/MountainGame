@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dxgdhkpbke1xp"]
+[gd_scene load_steps=15 format=3 uid="uid://dxgdhkpbke1xp"]
 
 [ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
 [ext_resource type="PackedScene" uid="uid://mqdlt8ijgb24" path="res://Blender_files/HANDS02.blend" id="3_wruxt"]
-[ext_resource type="Texture2D" uid="uid://6kly4xpmakdk" path="res://SKIN.png" id="4_dc2em"]
 [ext_resource type="Script" path="res://Tardigrade.gd" id="4_y12hr"]
+[ext_resource type="PackedScene" uid="uid://cqe5cwv2tud21" path="res://Blender_files/SWORD01.blend" id="5_pboay"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2ln"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -33,9 +33,6 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 [sub_resource type="BoxShape3D" id="BoxShape3D_fn6bu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y5k5l"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2uj2"]
-albedo_texture = ExtResource("4_dc2em")
 
 [node name="Node3D" type="Node3D"]
 
@@ -99,7 +96,5 @@ mesh = SubResource("BoxMesh_y5k5l")
 [node name="HANDS02" parent="." instance=ExtResource("3_wruxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
 
-[node name="Cube" parent="HANDS02/Armature/Skeleton3D" index="0"]
-material_override = SubResource("StandardMaterial3D_a2uj2")
-
-[editable path="HANDS02"]
+[node name="SWORD01" parent="." instance=ExtResource("5_pboay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5038, 6.64579, -5.20762)

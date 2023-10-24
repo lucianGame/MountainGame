@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
 [ext_resource type="PackedScene" uid="uid://mqdlt8ijgb24" path="res://Blender_files/HANDS02.blend" id="3_wruxt"]
 [ext_resource type="Script" path="res://Tardigrade.gd" id="4_y12hr"]
-[ext_resource type="PackedScene" uid="uid://cqe5cwv2tud21" path="res://Blender_files/SWORD01.blend" id="5_pboay"]
+[ext_resource type="PackedScene" uid="uid://b0rsei8nxup8v" path="res://Blender_files/SWORD01.blend" id="5_pboay"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2ln"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -97,4 +97,9 @@ mesh = SubResource("BoxMesh_y5k5l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
 
 [node name="SWORD01" parent="." instance=ExtResource("5_pboay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5038, 6.64579, -5.20762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04211, 7.17981, -16.5665)
+
+[node name="Cube" parent="SWORD01" index="0"]
+transform = Transform3D(0.129878, 0.0210335, 0.00584595, -0.00279755, 0.729689, -0.0680914, -0.00363742, 0.189819, 0.261105, -0.0994341, -1.42441, -1.263)
+
+[editable path="SWORD01"]

@@ -115,9 +115,6 @@
             "doubleSided" : true,
             "name" : "Material.001",
             "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0
-                },
                 "metallicFactor" : 0
             }
         }
@@ -137,19 +134,6 @@
                     "material" : 0
                 }
             ]
-        }
-    ],
-    "textures" : [
-        {
-            "sampler" : 0,
-            "source" : 0
-        }
-    ],
-    "images" : [
-        {
-            "mimeType" : "image/png",
-            "name" : "SWORD.png",
-            "uri" : "../../Blender_files/textures/SWORD.png"
         }
     ],
     "accessors" : [
@@ -271,16 +255,10 @@
             "byteOffset" : 10616
         }
     ],
-    "samplers" : [
-        {
-            "magFilter" : 9729,
-            "minFilter" : 9987
-        }
-    ],
     "buffers" : [
         {
             "byteLength" : 10936,
-            "uri" : "SWORD01-c7b224f4b02725a747db4e81a2bc1ec9.bin"
+            "uri" : "SWORD01-4157e1445a62daa53d1efbf5fb31564d.bin"
         }
     ]
 }

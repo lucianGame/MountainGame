@@ -44,7 +44,7 @@ transform = Transform3D(0.862514, 0.506034, 2.21194e-08, 0, -4.37114e-08, 1, 0.5
 shadow_enabled = true
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3288, 1.0645, 11.3467)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.329, 0, 11.347)
 script = ExtResource("1_b4rny")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
@@ -72,6 +72,7 @@ transform = Transform3D(0.0399751, 0.00646955, 0.00179775, -0.000861055, 0.22444
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07953, -9.67862)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="Enemies/Enemy 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8769, 0, 0)
 script = ExtResource("4_y12hr")
 player_path = NodePath("../../../Player")
 
@@ -85,6 +86,9 @@ mesh = SubResource("CapsuleMesh_7jm5c")
 skeleton = NodePath("../..")
 
 [node name="RayCast3D" type="RayCast3D" parent="Enemies/Enemy 1/CharacterBody3D"]
+transform = Transform3D(-5.21253e-16, -3.57746e-07, -1, 1, -1.31134e-06, 0, -4.37114e-08, -30, 1.19249e-08, -0.250739, 0, 0.939)
+
+[node name="target" type="Node" parent="Enemies/Enemy 1"]
 
 [node name="Map" type="Node3D" parent="."]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxgdhkpbke1xp"]
+[gd_scene load_steps=16 format=3 uid="uid://dxgdhkpbke1xp"]
 
 [ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
 [ext_resource type="PackedScene" uid="uid://mqdlt8ijgb24" path="res://Blender_files/HANDS02.blend" id="3_wruxt"]
 [ext_resource type="Script" path="res://Tardigrade.gd" id="4_y12hr"]
+[ext_resource type="PackedScene" uid="uid://b4rjrnoi4gssq" path="res://Blender_files/TARDI01.blend" id="5_k028o"]
 [ext_resource type="PackedScene" uid="uid://b0rsei8nxup8v" path="res://Blender_files/SWORD01.blend" id="5_pboay"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2ln"]
@@ -108,5 +109,8 @@ mesh = SubResource("BoxMesh_y5k5l")
 [node name="HANDS02" parent="." instance=ExtResource("3_wruxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
 visible = false
+
+[node name="TARDI01" parent="." instance=ExtResource("5_k028o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2132, 2.06439, -3.5402)
 
 [editable path="Player/Neck/Camera3D/SWORD01"]

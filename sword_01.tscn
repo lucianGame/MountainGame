@@ -29,7 +29,7 @@ _data = {
 [node name="SWORD01" instance=ExtResource("1_p5jrj")]
 
 [node name="Cube" parent="." index="0"]
-transform = Transform3D(0.0566841, -0.539659, 0.147301, 0.0696078, 0.52329, 0.129945, -0.0939735, 0.0620911, 0.185103, 0.346853, -1.57646, 3.42902)
+transform = Transform3D(-0.0245867, -0.619659, 0.145167, 0.125563, -0.0437375, 0.0678204, -0.0227749, 0.427819, 0.217195, 0.933074, -1.77664, 9.07877)
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {

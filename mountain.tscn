@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxgdhkpbke1xp"]
+[gd_scene load_steps=18 format=3 uid="uid://dxgdhkpbke1xp"]
 
-[ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
+[ext_resource type="Script" path="res://SaveStatus.gd" id="1_pjbx1"]
 [ext_resource type="PackedScene" uid="uid://mqdlt8ijgb24" path="res://Blender_files/HANDS02.blend" id="3_wruxt"]
 [ext_resource type="Script" path="res://Tardigrade.gd" id="4_y12hr"]
 [ext_resource type="PackedScene" uid="uid://b4rjrnoi4gssq" path="res://Blender_files/TARDI01.blend" id="5_k028o"]
 [ext_resource type="PackedScene" uid="uid://b0rsei8nxup8v" path="res://Blender_files/SWORD01.blend" id="5_pboay"]
+[ext_resource type="Script" path="res://Save.gd" id="6_7pc7h"]
+[ext_resource type="Script" path="res://LineEdit.gd" id="7_csp7e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2ln"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -23,7 +25,13 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y2rey"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pwvou"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8i51n"]
+radius = 1.54216
+height = 5.1551
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdg12"]
+radius = 1.4472
+height = 3.3302
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_vql65"]
 vertices = PackedVector3Array(-22.25, 0.45, -29.5, -29.5, 0.45, -29.5, -29.5, 0.45, -22.25, -29.5, 0.45, 22, -29.5, 0.45, 29.5, -22.25, 0.45, 29.5, 29.5, 0.45, -22.25, 29.5, 0.45, -29.5, 22, 0.45, -29.5, 22, 0.45, 29.5, 29.5, 0.45, 29.5, 29.5, 0.45, 22, -29.5, 0.45, 14.75, -29.5, 0.45, 22, -22.25, 0.45, 29.5, -14.75, 0.45, 29.5, 29.5, 0.45, -22.25, 22, 0.45, -29.5, 14.75, 0.45, -29.5, 29.5, 0.45, -14.75, -14.75, 0.45, -29.5, -22.25, 0.45, -29.5, -29.5, 0.45, -22.25, -29.5, 0.45, -14.75, 14.75, 0.45, 29.5, 22, 0.45, 29.5, 29.5, 0.45, 22, 7.25, 0.45, 29.5, 29.5, 0.45, 14.75, 29.5, 0.45, 7.25, 0, 0.45, 29.5, 14.75, 0.45, 29.5, 29.5, 0.45, 22, 29.5, 0.45, 14.75, 7.25, 0.45, 29.5, 0, 0.45, -29.5, -7.5, 0.45, -29.5, -29.5, 0.45, -7.5, -29.5, 0.45, 0, 29.5, 0.45, 0, 0, 0.45, -29.5, -29.5, 0.45, 0, -7.5, 0.45, 29.5, 0, 0.45, 29.5, 29.5, 0.45, 7.25, -29.5, 0.45, 14.75, -14.75, 0.45, 29.5, -7.5, 0.45, 29.5, -29.5, 0.45, 7.25, 29.5, 0.45, -7.5, 29.5, 0.45, -14.75, 14.75, 0.45, -29.5, 7.25, 0.45, -29.5, -7.5, 0.45, -29.5, -14.75, 0.45, -29.5, -29.5, 0.45, -14.75, -29.5, 0.45, -7.5, -29.5, 0.45, 0, -29.5, 0.45, 7.25, -7.5, 0.45, 29.5, 29.5, 0.45, -7.5, 7.25, 0.45, -29.5, 0, 0.45, -29.5, 29.5, 0.45, 0)
@@ -42,9 +50,9 @@ environment = SubResource("Environment_6lhke")
 transform = Transform3D(0.862514, 0.506034, 2.21194e-08, 0, -4.37114e-08, 1, 0.506034, -0.862514, -3.77017e-08, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D" parent="." groups=["SaveLoad"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.329, 0, 11.347)
-script = ExtResource("1_b4rny")
+script = ExtResource("1_pjbx1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 visible = false
@@ -60,7 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55105, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5052, 0)
 
 [node name="SWORD01" parent="Player/Neck/Camera3D" instance=ExtResource("5_pboay")]
-transform = Transform3D(-0.39445, 0.35077, -0.459749, 0.461788, 0.526047, 0.00515267, 0.348082, -0.300392, -0.52783, 0.376088, 0.248425, -1.55385)
+transform = Transform3D(-0.7, 0, -6.11959e-08, 0, 0.7, 0, 6.11959e-08, 0, -0.7, 0.376088, 0.248425, -1.55385)
 
 [node name="Cube" parent="Player/Neck/Camera3D/SWORD01" index="0"]
 transform = Transform3D(0.0399751, 0.00646955, 0.00179775, -0.000861055, 0.22444, -0.0209395, -0.00111956, 0.058385, 0.0802951, -0.0994341, -1.42441, -1.263)
@@ -76,7 +84,8 @@ script = ExtResource("4_y12hr")
 player_path = NodePath("../../../Player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/Enemy 1/CharacterBody3D"]
-shape = SubResource("ConvexPolygonShape3D_pwvou")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.236947, 0.0957133, 0.534039)
+shape = SubResource("CapsuleShape3D_8i51n")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Enemies/Enemy 1/CharacterBody3D"]
 
@@ -85,6 +94,10 @@ transform = Transform3D(1.91069e-15, 1.31134e-06, 1, 1, -1.31134e-06, 0, 4.37114
 
 [node name="TARDI01" parent="Enemies/Enemy 1/CharacterBody3D" instance=ExtResource("5_k028o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.583557, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Enemies/Enemy 1/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.111072, 0.968222, -1.29411)
+shape = SubResource("CapsuleShape3D_gdg12")
 
 [node name="target" type="Node" parent="Enemies/Enemy 1"]
 
@@ -106,5 +119,39 @@ mesh = SubResource("BoxMesh_y5k5l")
 [node name="HANDS02" parent="." instance=ExtResource("3_wruxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
 visible = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_7pc7h")
+
+[node name="Load" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 386.0
+offset_right = 684.0
+offset_bottom = 468.0
+text = "Load"
+
+[node name="Save" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 268.0
+offset_right = 684.0
+offset_bottom = 350.0
+text = "Save"
+
+[node name="LineEdit" type="LineEdit" parent="Control" groups=["SaveLoad"]]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 199.0
+offset_right = 635.062
+offset_bottom = 230.0
+script = ExtResource("7_csp7e")
+
+[connection signal="pressed" from="Control/Load" to="Control" method="_on_load_pressed"]
+[connection signal="pressed" from="Control/Save" to="Control" method="_on_save_pressed"]
 
 [editable path="Player/Neck/Camera3D/SWORD01"]

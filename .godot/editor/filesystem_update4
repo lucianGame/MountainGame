@@ -2,4 +2,6 @@ res://mountain.tscn
 res://level.tscn
 res://sword_01.tscn
 res://tardi_01.tscn
-res://Tardigrade.gd
+res://Save.gd
+res://LineEdit.gd
+res://SaveStatus.gd

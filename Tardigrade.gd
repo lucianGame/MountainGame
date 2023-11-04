@@ -5,7 +5,7 @@ var player = null
 
 
 const speed = 2.0
-const attackRange = 2.5
+const attackRange = 5
 
 var test = 2
 
@@ -52,7 +52,8 @@ func _process(delta):
 			print("hit")
 			nav_agent.set_target_position(player.global_transform.origin) #the enemy will move towards the player's position
 			look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
-			move_and_slide()
+			if global_position.distance_to(player.global_position) > attackRange:
+				move_and_slide()
 			#insert animation
 		ATTACKING:
 			test = 3

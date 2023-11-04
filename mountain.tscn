@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dxgdhkpbke1xp"]
+[gd_scene load_steps=15 format=3 uid="uid://dxgdhkpbke1xp"]
 
 [ext_resource type="Script" path="res://PlayerMovent.gd" id="1_b4rny"]
 [ext_resource type="PackedScene" uid="uid://mqdlt8ijgb24" path="res://Blender_files/HANDS02.blend" id="3_wruxt"]
@@ -23,9 +23,7 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y2rey"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_brl7s"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_7jm5c"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pwvou"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_vql65"]
 vertices = PackedVector3Array(-22.25, 0.45, -29.5, -29.5, 0.45, -29.5, -29.5, 0.45, -22.25, -29.5, 0.45, 22, -29.5, 0.45, 29.5, -22.25, 0.45, 29.5, 29.5, 0.45, -22.25, 29.5, 0.45, -29.5, 22, 0.45, -29.5, 22, 0.45, 29.5, 29.5, 0.45, 29.5, 29.5, 0.45, 22, -29.5, 0.45, 14.75, -29.5, 0.45, 22, -22.25, 0.45, 29.5, -14.75, 0.45, 29.5, 29.5, 0.45, -22.25, 22, 0.45, -29.5, 14.75, 0.45, -29.5, 29.5, 0.45, -14.75, -14.75, 0.45, -29.5, -22.25, 0.45, -29.5, -29.5, 0.45, -22.25, -29.5, 0.45, -14.75, 14.75, 0.45, 29.5, 22, 0.45, 29.5, 29.5, 0.45, 22, 7.25, 0.45, 29.5, 29.5, 0.45, 14.75, 29.5, 0.45, 7.25, 0, 0.45, 29.5, 14.75, 0.45, 29.5, 29.5, 0.45, 22, 29.5, 0.45, 14.75, 7.25, 0.45, 29.5, 0, 0.45, -29.5, -7.5, 0.45, -29.5, -29.5, 0.45, -7.5, -29.5, 0.45, 0, 29.5, 0.45, 0, 0, 0.45, -29.5, -29.5, 0.45, 0, -7.5, 0.45, 29.5, 0, 0.45, 29.5, 29.5, 0.45, 7.25, -29.5, 0.45, 14.75, -14.75, 0.45, 29.5, -7.5, 0.45, 29.5, -29.5, 0.45, 7.25, 29.5, 0.45, -7.5, 29.5, 0.45, -14.75, 14.75, 0.45, -29.5, 7.25, 0.45, -29.5, -7.5, 0.45, -29.5, -14.75, 0.45, -29.5, -29.5, 0.45, -14.75, -29.5, 0.45, -7.5, -29.5, 0.45, 0, -29.5, 0.45, 7.25, -7.5, 0.45, 29.5, 29.5, 0.45, -7.5, 7.25, 0.45, -29.5, 0, 0.45, -29.5, 29.5, 0.45, 0)
@@ -78,16 +76,15 @@ script = ExtResource("4_y12hr")
 player_path = NodePath("../../../Player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/Enemy 1/CharacterBody3D"]
-shape = SubResource("CapsuleShape3D_brl7s")
+shape = SubResource("ConvexPolygonShape3D_pwvou")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Enemies/Enemy 1/CharacterBody3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Enemies/Enemy 1/CharacterBody3D"]
-mesh = SubResource("CapsuleMesh_7jm5c")
-skeleton = NodePath("../..")
-
 [node name="RayCast3D" type="RayCast3D" parent="Enemies/Enemy 1/CharacterBody3D"]
-transform = Transform3D(-5.21253e-16, -3.57746e-07, -1, 1, -1.31134e-06, 0, -4.37114e-08, -30, 1.19249e-08, -0.250739, 0, 0.939)
+transform = Transform3D(1.91069e-15, 1.31134e-06, 1, 1, -1.31134e-06, 0, 4.37114e-08, 30, -4.37114e-08, -0.250739, 0, 0.939)
+
+[node name="TARDI01" parent="Enemies/Enemy 1/CharacterBody3D" instance=ExtResource("5_k028o")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.583557, 0)
 
 [node name="target" type="Node" parent="Enemies/Enemy 1"]
 
@@ -109,8 +106,5 @@ mesh = SubResource("BoxMesh_y5k5l")
 [node name="HANDS02" parent="." instance=ExtResource("3_wruxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8706, 4.02824, 14.3609)
 visible = false
-
-[node name="TARDI01" parent="." instance=ExtResource("5_k028o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2132, 2.06439, -3.5402)
 
 [editable path="Player/Neck/Camera3D/SWORD01"]
